@@ -35,6 +35,7 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     Search: typeof import('./src/components/hero/Search.vue')['default']
     SearchIcon: typeof import('./src/components/icon/searchIcon.vue')['default']
+    SettingsIcon: typeof import('./src/components/icon/settingsIcon.vue')['default']
     ShareIcon: typeof import('./src/components/icon/shareIcon.vue')['default']
     Sidebar: typeof import('./src/components/Sidebar.vue')['default']
     Switch: typeof import('./src/components/hero/Switch.vue')['default']

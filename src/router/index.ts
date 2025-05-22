@@ -12,43 +12,6 @@ const router = createRouter({
 			}
 		},
 		{
-			path: '/container',
-			name: 'container',
-			component: () => import('../views/ContainerView.vue'),
-			meta: {
-				transition: 'slide'
-			}
-		},
-		{
-			path: '/container/create',
-			name: 'create-container',
-			component: () => import('../views/CreateContainerView.vue'),
-			meta: {
-				transition: 'slide'
-			}
-		},
-		{
-			path: '/account',
-			name: 'account',
-			component: () => import('../views/AccountView.vue'),
-			meta: {
-				transition: 'slide'
-			}
-		},
-		{
-			path: '/login',
-			name: 'login',
-			component: () => import('../views/LoginView.vue'),
-			meta: {
-				transition: 'slide'
-			}
-		},
-		{
-			path: '/callback',
-			name: 'callback',
-			component: () => import('../views/CallbackView.vue')
-		},
-		{
 			path: '/video/:id',
 			name: 'video',
 			component: () => import('../views/VideoView.vue'),
