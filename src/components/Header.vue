@@ -32,8 +32,8 @@
                 <NotificationDrawer />
 
                 <div ref="userDropdownRef" class="relative flex items-center h-10">
-                    <div class="bg-gray-200 dark:bg-gray-700 rounded-full p-1 cursor-pointer" @click="toggleDropdown">
-                        <UserIcon color="text-black dark:text-white" size="w-6 h-6" />
+                    <div class="hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-2 cursor-pointer" @click="toggleDropdown">
+                        <settingsIcon color="text-black dark:text-white" size="w-6 h-6" />
                     </div>
                     <Dropdown v-if="!isMobile" :open="open" :items="items" @select="handleSelect" />
                 </div>
@@ -45,10 +45,7 @@
         <MobileModal v-model="open">
             <div class="flex flex-col gap-2">
                 <template v-for="(item, index) in items" :key="index">
-                    <template v-if="item.divider">
-                        <div class="h-px bg-gray-200 dark:bg-gray-700 my-2"></div>
-                    </template>
-                    <template v-else-if="item.custom">
+                    <template v-if="item.custom">
                         <component :is="item.component" v-bind="item.props" />
                     </template>
                     <template v-else>
@@ -56,7 +53,6 @@
                             @click="handleSelect(item.value)"
                             class="w-full text-left px-4 py-2 rounded-lg transition-colors duration-300"
                             :class="[
-                                item.danger ? 'text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20' : 
                                 'text-black dark:text-white hover:bg-primary-300'
                             ]"
                         >
@@ -94,7 +90,6 @@ const userDropdownRef = ref<HTMLElement | null>(null)
 const sgtmDropdownRef = ref<HTMLElement | null>(null)
 
 const items = computed(() => [
-    { label: 'Minha Conta', value: 'account' },
     { 
         label: 'Modo Escuro', 
         value: 'dark-mode',
@@ -107,16 +102,6 @@ const items = computed(() => [
             open.value = false
         }
     },
-    { divider: true },
-    { label: 'Sair', value: 'logout', danger: true },
-])
-
-const sgtmItems = ref([
-    { label: 'Container 1', value: 'container1' },
-    { label: 'Container 2', value: 'container2' },
-    { label: 'Container 3', value: 'container3' },
-    { divider: true },
-    { label: 'Adicionar Container', value: 'add-container', icon: markRaw(plusIcon) },
 ])
 
 const isMobile = ref(false)
