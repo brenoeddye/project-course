@@ -19,16 +19,6 @@
                             <span class="text-black dark:text-white" :class="{'text-primary': $route.name === 'home'}">Descubra</span>
                         </router-link>
                     </li>
-
-                    <li>
-                        <div ref="sgtmDropdownRef" class="relative h-10">
-                            <button @click="sgtmOpen = !sgtmOpen" class="flex items-center gap-2 p-2 px-4 rounded-lg transition-colors duration-300 hover:bg-primary-300" :class="{'bg-primary-100': $route.name === 'container'}">
-                                <databaseIcon color="text-black dark:text-white" size="w-6 h-6" :class="{'text-primary dark:text-primary-900': $route.name === 'container'}" />
-                                <span class="text-black dark:text-white" :class="{'text-primary': $route.name === 'container'}">Meus cursos</span>
-                            </button>
-                            <Dropdown :open="sgtmOpen" :items="sgtmItems" @select="handleSgtmSelect" />
-                        </div>
-                    </li>
                 </ul>
             </div>
 

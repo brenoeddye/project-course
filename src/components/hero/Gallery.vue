@@ -1,10 +1,10 @@
 <template>
-	<div class="gallery-card bg-white dark:bg-gray-800 rounded-lg shadow flex flex-col items-center overflow-hidden pb-6" @click="$emit('select')">
+	<div class="gallery-card bg-white dark:bg-gray-800 rounded-lg shadow flex flex-col items-center overflow-hidden pb-6 hover:shadow-lg dark:hover:shadow-gray-700/50 transition-all" @click="$emit('select')">
 		<img :src="image" :alt="title" class="w-full h-40 object-cover mb-4" />
 
 		<div class="flex flex-col items-start w-full px-5">
-			<h3 class="text-lg font-semibold mb-2">{{ title }}</h3>
-			<p class="text-gray-600 text-sm text-center">{{ description }}</p>
+			<h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">{{ title }}</h3>
+			<p class="text-gray-600 dark:text-gray-400 text-sm text-center">{{ description }}</p>
 		</div>
 	</div>
 </template>
@@ -36,11 +36,11 @@ const { image, title, description } = props
 }
 
 .gallery-card {
-	transition: box-shadow 0.2s;
+	transition: all 0.2s ease-in-out;
 	cursor: pointer;
 }
 
 .gallery-card:hover {
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+	transform: translateY(-2px);
 }
 </style>

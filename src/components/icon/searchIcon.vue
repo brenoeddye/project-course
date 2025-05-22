@@ -6,14 +6,14 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  size: {
-    type: String,
-    default: 'w-6 h-6',
-  },
-  color: {
-    type: String,
-    default: 'text-black dark:text-white',
-  },
-});
+defineProps({
+    color: {
+        type: String,
+        default: 'text-black'
+    },
+    size: {
+        type: String,
+        default: 'w-6 h-6'
+    }
+})
 </script> 

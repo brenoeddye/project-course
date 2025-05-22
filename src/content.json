@@ -1,0 +1,54 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "youtubeUrl": "https://www.youtube.com/watch?v=j-RcG7WxHYs",
+      "title": "Frete Grátis Progressivo",
+      "subtitle": "Aprenda a usar o frete grátis progressivo para aumentar as vendas",
+      "description": "O 'Frete Grátis Progressivo' é uma estratégia de vendas utilizada por algumas lojas e e-commerces para incentivar o aumento do valor de compra dos clientes. Nessa estratégia, o frete grátis é oferecido de forma gradual à medida que o cliente vai adicionando mais produtos ao seu carrinho de compras. Por exemplo, o cliente pode ter o frete grátis total ou parcial à medida que seu gasto total aumenta. Em alguns casos, pode haver um valor mínimo de compra para o frete gratuito ser ativado, e em outros, o frete grátis pode ser progressivo, ou seja, com descontos no valor do frete conforme o cliente alcança determinados marcos de compra. Conheça a SHOPPUB ! Somos uma plataforma de ecommerce adaptável, atenta as mudanças do mercado e parceira dos nossos clientes. INSTAGRAM  :  @shoppub_ecommerce Conheça a SHOPPUB !  Somos uma plataforma de ecommerce adaptável, atenta as mudanças do mercado e parceira dos nossos clientes. INSTAGRAM  :  @shoppub_ecommerce",
+      "category": "Campanhas",
+      "keywords": ["campanha", "frete grátis", "progressivo", "ecommerce"],
+      "thumbnail": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 2,
+      "youtubeUrl": "https://www.youtube.com/watch?v=exemplo2",
+      "title": "Configuração de Acessórios Modernos",
+      "subtitle": "SHOPPUB",
+      "description": "Tutorial completo sobre como configurar e utilizar nossos acessórios modernos para escritório.",
+      "category": "Configurações",
+      "keywords": ["acessórios", "configuração", "tutorial", "escritório"],
+      "thumbnail": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 3,
+      "youtubeUrl": "https://www.youtube.com/watch?v=exemplo3",
+      "title": "Campanha de Lançamento - Coleção Minimalista",
+      "subtitle": "SHOPPUB",
+      "description": "Conheça nossa nova coleção de decoração minimalista para escritório.",
+      "category": "Campanhas",
+      "keywords": ["campanha", "lançamento", "minimalista", "decoração"],
+      "thumbnail": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 4,
+      "youtubeUrl": "https://www.youtube.com/watch?v=exemplo4",
+      "title": "Guia de Cuidados com Canecas de Porcelana",
+      "subtitle": "SHOPPUB",
+      "description": "Aprenda a cuidar e manter suas canecas de porcelana sempre bonitas e duráveis.",
+      "category": "Produtos",
+      "keywords": ["canecas", "porcelana", "cuidados", "manutenção"],
+      "thumbnail": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 5,
+      "youtubeUrl": "https://www.youtube.com/watch?v=exemplo5",
+      "title": "Dicas de Uso do Bloco de Notas",
+      "subtitle": "SHOPPUB",
+      "description": "Descubra como aproveitar ao máximo seu bloco de notas para aumentar sua produtividade.",
+      "category": "Outros",
+      "keywords": ["bloco de notas", "produtividade", "dicas", "organização"],
+      "thumbnail": "https://images.unsplash.com/photo-1454023492550-5696f8ff10e1?auto=format&fit=crop&w=400&q=80"
+    }
+  ]
+}
