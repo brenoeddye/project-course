@@ -1,6 +1,13 @@
 <template>
-	<div class="gallery-card bg-white dark:bg-gray-800 rounded-lg shadow flex flex-col items-center overflow-hidden pb-6 hover:shadow-lg dark:hover:shadow-gray-700/50 transition-all" @click="$emit('select')">
+	<div class="gallery-card bg-white dark:bg-gray-800 rounded-lg shadow flex flex-col items-center overflow-hidden pb-6 hover:shadow-lg dark:hover:shadow-gray-700/50 transition-all relative" @click="$emit('select')">
 		<img :src="image" :alt="title" class="w-full h-60 object-cover mb-4" />
+		<span v-if="chip" :class="[
+			'absolute top-2 right-2 px-2 py-1 text-xs font-medium rounded-full',
+			chipColor.bg,
+			chipColor.text,
+			chipColor.darkBg,
+			chipColor.darkText
+		]">{{ chip }}</span>
 
 		<div class="flex flex-col items-start w-full px-5">
 			<h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">{{ title }}</h3>
@@ -24,10 +31,23 @@ const props = defineProps({
 	description: {
 		type: String,
 		default: 'Organize seu espaço de trabalho com estilo e praticidade.'
+	},
+	chip: {
+		type: String,
+		default: ''
+	},
+	chipColor: {
+		type: Object,
+		default: () => ({
+			bg: 'bg-blue-100',
+			text: 'text-blue-800',
+			darkBg: 'dark:bg-blue-900',
+			darkText: 'dark:text-blue-300'
+		})
 	}
 })
 
-const { image, title, description } = props
+const { image, title, description, chip, chipColor } = props
 </script>
 
 <style scoped>

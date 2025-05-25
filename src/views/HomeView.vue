@@ -6,6 +6,8 @@
           :image="item.thumbnail"
           :title="item.title"
           :description="item.subtitle"
+          :chip="item.category"
+          :chip-color="getCategoryColor(item.category)"
           @select="goToVideo(idx)"
         />
     </main>
@@ -15,9 +17,9 @@
 import Gallery from '@/components/hero/Gallery.vue'
 import { useRouter } from 'vue-router'
 import content from '@/content.json'
+import { getCategoryColor } from '@/config/categoryColors'
 
 const router = useRouter()
-
 const galleryItems = content.videos
 
 function goToVideo(idx: number) {
