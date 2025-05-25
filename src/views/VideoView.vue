@@ -34,13 +34,16 @@ import { useRoute } from 'vue-router'
 import content from '@/content.json'
 
 const route = useRoute()
-const videoId = computed(() => Number(route.params.id) || 0)
-const videoData = computed(() => content.videos[videoId.value] || content.videos[0])
 
-// Função para converter URL do YouTube em URL de embed
+const videoId = computed(() => Number(route.params.id) || 0)
+
+const videoData = computed(() => {
+	return content.videos.find(v => v.id === videoId.value) || content.videos[0]
+})
+
 const youtubeEmbedUrl = computed(() => {
 	const videoUrl = videoData.value.youtubeUrl
-	const videoId = videoUrl.split('v=')[1]
-	return `https://www.youtube.com/embed/${videoId}`
+	const videoIdMatch = videoUrl.split('v=')[1]?.split('&')[0] || ''
+	return `https://www.youtube.com/embed/${videoIdMatch}`
 })
 </script>
