@@ -6,7 +6,7 @@
 				<div class="relative pb-[56.25%] sm:pb-[45%] md:pb-[35%] lg:pb-[56%]">
 					<iframe :src="youtubeEmbedUrl" class="absolute inset-0 w-full h-full rounded-lg shadow-lg" frameborder="0"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
+						allowfullscreen @load="onIframeLoad" ref="youtubeIframe"></iframe>
 				</div>
 
 				<VideoDetails />
@@ -29,16 +29,83 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import content from '@/content.json'
+
+// Declarações de tipo para o YouTube Player API
+declare global {
+	interface Window {
+		YT: {
+			Player: new (element: HTMLElement, options: any) => any
+		}
+		onYouTubeIframeAPIReady: () => void
+		dataLayer?: any[]
+	}
+}
 
 const props = defineProps<{
 	video: typeof content.videos[0]
 }>()
 
+const youtubeIframe = ref<HTMLIFrameElement | null>(null)
+let player: any = null
+
 const youtubeEmbedUrl = computed(() => {
 	const videoUrl = props.video.youtubeUrl
 	const videoIdMatch = videoUrl.split('v=')[1]?.split('&')[0] || ''
-	return `https://www.youtube.com/embed/${videoIdMatch}`
+	return `https://www.youtube.com/embed/${videoIdMatch}?enablejsapi=1&origin=${window.location.origin}`
+})
+
+function onIframeLoad() {
+	if (window.YT && window.YT.Player) {
+		initializePlayer()
+	} else {
+		// Carrega a API do YouTube se ainda não estiver carregada
+		const tag = document.createElement('script')
+		tag.src = 'https://www.youtube.com/iframe_api'
+		const firstScriptTag = document.getElementsByTagName('script')[0]
+		firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag)
+
+		window.onYouTubeIframeAPIReady = initializePlayer
+	}
+}
+
+function initializePlayer() {
+	if (!youtubeIframe.value) return
+
+	player = new window.YT.Player(youtubeIframe.value, {
+		events: {
+			onStateChange: onPlayerStateChange
+		}
+	})
+}
+
+function onPlayerStateChange(event: { data: number; target: { getCurrentTime: () => number } }) {
+	// Eventos do YouTube Player
+	const events: Record<number, string> = {
+		[-1]: 'unstarted',
+		[0]: 'ended',
+		[1]: 'playing',
+		[2]: 'paused',
+		[3]: 'buffering',
+		[5]: 'video cued'
+	}
+
+	const eventName = events[event.data] || 'unknown'
+	const videoId = props.video.youtubeUrl.split('v=')[1]?.split('&')[0] || ''
+	const videoTitle = props.video.title
+
+	// Envia evento para o GA4 via GTM
+	window.dataLayer?.push({
+		event: 'youtube_video_event',
+		video_event: eventName,
+		video_id: videoId,
+		video_title: videoTitle,
+		video_progress: event.target.getCurrentTime()
+	})
+}
+
+onMounted(() => {
+	// Inicialização do player
 })
 </script>
