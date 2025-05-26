@@ -80,8 +80,7 @@ function initializePlayer() {
 	})
 }
 
-function onPlayerStateChange(event: { data: number; target: { getCurrentTime: () => number } }) {
-	// Eventos do YouTube Player
+function onPlayerStateChange(event: { data: number; target: { getCurrentTime: () => number; getDuration: () => number } }) {
 	const events: Record<number, string> = {
 		[-1]: 'unstarted',
 		[0]: 'ended',
@@ -95,13 +94,23 @@ function onPlayerStateChange(event: { data: number; target: { getCurrentTime: ()
 	const videoId = props.video.youtubeUrl.split('v=')[1]?.split('&')[0] || ''
 	const videoTitle = props.video.title
 
-	// Envia evento para o GA4 via GTM
+	function calcularPercentual(event: { target: { getCurrentTime: () => number; getDuration: () => number } }) {
+		try {
+			const current = event.target.getCurrentTime()
+			const total = event.target.getDuration()
+			if (!total) return 0
+			return Math.round((current / total) * 100)
+		} catch {
+			return 0
+		}
+	}
+
 	window.dataLayer?.push({
 		event: 'youtube_video_event',
 		video_event: eventName,
 		video_id: videoId,
 		video_title: videoTitle,
-		video_progress: event.target.getCurrentTime()
+		video_percent: calcularPercentual(event)
 	})
 }
 
