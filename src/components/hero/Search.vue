@@ -32,6 +32,7 @@ import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import searchIcon from '@/components/icon/searchIcon.vue'
 import content from '@/content.json'
+import { generateSlug } from '@/utils/slug'
 
 const router = useRouter()
 const search = ref('')
@@ -87,7 +88,10 @@ function updateSuggestions() {
 
 function navigateToVideo(id: number) {
 	showSuggestions.value = false
-	router.push({ name: 'video', params: { id } })
+	const video = content.videos.find(v => v.id === id)
+	if (video) {
+		router.push({ name: 'video', params: { slug: generateSlug(video.title) } })
+	}
 }
 
 function onSearch() {

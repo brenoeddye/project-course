@@ -23,6 +23,7 @@
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import content from '@/content.json'
+import { generateSlug } from '@/utils/slug'
 
 const props = defineProps<{
   currentVideoId: number
@@ -60,6 +61,9 @@ const relatedVideos = computed(() => {
 })
 
 function navigateToVideo(index: number) {
-  router.push({ name: 'video', params: { id: index } })
+  const video = content.videos[index]
+  if (video) {
+    router.push({ name: 'video', params: { slug: generateSlug(video.title) } })
+  }
 }
 </script> 
