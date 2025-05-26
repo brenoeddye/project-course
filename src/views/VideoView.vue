@@ -1,6 +1,6 @@
 <template>
 	<div class="video-view bg-gray-100 dark:bg-gray-900 min-h-screen">
-		<div class="container mx-auto py-8 flex flex-col lg:flex-row gap-8">
+		<div class="container max-w-[90%] mx-auto py-8 flex flex-col lg:flex-row gap-8">
 			<!-- Player e informações principais -->
 			<div class="flex-1">
 				<div class="relative pb-[56.25%] sm:pb-[45%] md:pb-[35%] lg:pb-[56%]">
