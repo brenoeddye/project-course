@@ -135,6 +135,21 @@
                 "ecommerce"
             ],
             "thumbnail": "https://img.youtube.com/vi/22krSplqybI/maxresdefault.jpg"
+        },
+        {
+            "id": 10,
+            "youtubeUrl": "https://www.youtube.com/watch?v=laiLk1v6JJg",
+            "title": "Campanhas de Frete que Excluem Clientes: Erro Fatal no E-commerce !",
+            "subtitle": "Aprenda a gerar um relatório de pedidos com cupom de desconto na Shoppub.",
+            "description": "Você está rodando campanhas de frete que, sem perceber, estão afastando clientes do seu e-commerce? 😬 As chamadas campanhas de frete discriminatórias acabam excluindo usuários por região, valor mínimo ou outras barreiras que mais prejudicam do que ajudam. Neste vídeo, eu mostro como identificar se você está cometendo esse erro, quais os impactos na experiência do cliente e como corrigir isso sem perder rentabilidade. 🚫 Não deixe sua estratégia matar sua conversão. Assiste até o fim!",
+            "category": "Campanhas",
+            "keywords": [
+                "frete",
+                "campanha",
+                "ecommerce",
+                "shoppub"
+            ],
+            "thumbnail": "https://img.youtube.com/vi/laiLk1v6JJg/maxresdefault.jpg"
         }
     ]
 }
