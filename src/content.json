@@ -94,7 +94,8 @@
             "youtubeUrl": "https://www.youtube.com/watch?v=yuxlcPGUQvQ",
             "title": "Como Autenticar Seu Domínio no Google pela Plataforma Shoppub (Passo a Passo)",
             "subtitle": "Aprenda a ativar o Google Search Console na sua loja com a Shoppub",
-            "description": "Aprenda como autenticar seu domínio no Google de forma simples e rápida usando a plataforma Shoppub! 🚀 Este tutorial passo a passo vai te ajudar a configurar tudo corretamente para garantir que sua loja esteja validada e pronta para aparecer nos resultados do Google. Ideal para quem usa Shoppub e quer otimizar sua presença online. 🔒 Verificação DNS 🧩 Google Search Console 🛒 Integração com e-commerce Shoppub 📌 Deixe seu like e se inscreva para mais tutoriais sobre e-commerce e marketing digital!","category": "Configurações",
+            "description": "Aprenda como autenticar seu domínio no Google de forma simples e rápida usando a plataforma Shoppub! 🚀 Este tutorial passo a passo vai te ajudar a configurar tudo corretamente para garantir que sua loja esteja validada e pronta para aparecer nos resultados do Google. Ideal para quem usa Shoppub e quer otimizar sua presença online. 🔒 Verificação DNS 🧩 Google Search Console 🛒 Integração com e-commerce Shoppub 📌 Deixe seu like e se inscreva para mais tutoriais sobre e-commerce e marketing digital!",
+            "category": "Configurações",
             "keywords": [
                 "google",
                 "shoppub",
@@ -103,6 +104,37 @@
                 "domínio"
             ],
             "thumbnail": "https://img.youtube.com/vi/yuxlcPGUQvQ/maxresdefault.jpg"
+        },
+        {
+            "id": 8,
+            "youtubeUrl": "https://www.youtube.com/watch?v=eZG_nMcS8oY",
+            "title": "Integre Shoppup com Zoppy e Turbine suas Vendas!",
+            "subtitle": "Aprenda a integrar a Zoppy com a Shoppub e aumentar suas vendas.",
+            "description": "Integração da Zoppy com a Shoppub: Potencialize seu Pós-Venda e Fidelização A integração da Zoppy com a Shoppub permite transformar o pós-venda do seu e-commerce em uma poderosa estratégia de fidelização e crescimento. Com recursos como automações, segmentação e Giftback, a Zoppy ajuda a maximizar sua receita e retenção de clientes, garantindo uma experiência personalizada e eficiente. Este tutorial guiará você no processo de integração da Zoppy com a Shoppub, permitindo que sua loja aproveite ao máximo os benefícios dessa ferramenta. Siga o passo a passo abaixo e comece a impulsionar suas vendas! 🚀 Veja mais sobre a Zoppy em : https://www.zoppy.com.br",
+            "category": "Integrações",
+            "keywords": [
+                "zoppy",
+                "shoppub",
+                "ecommerce",
+                "fidelização",
+                "giftback"
+            ],
+            "thumbnail": "https://img.youtube.com/vi/eZG_nMcS8oY/maxresdefault.jpg"
+        },
+        {
+            "id": 9,
+            "youtubeUrl": "https://www.youtube.com/watch?v=22krSplqybI",
+            "title": "Aprenda a Gerar um Relatório de Pedidos com Cupom de Desconto",
+            "subtitle": "Aprenda a gerar um relatório de pedidos com cupom de desconto na Shoppub.",
+            "description": "Quer saber como gerar um relatório de pedidos com base em um cupom específico? Neste vídeo, eu te mostro o passo a passo completo para filtrar pedidos por cupom dentro da sua plataforma de e-commerce! Conheça a SHOPPUB !  Somos uma plataforma de ecommerce adaptável, atenta as mudanças do mercado e parceira dos nossos clientes. INSTAGRAM  :  @shoppub_ecommerce Não esquece de deixar o like, se inscrever no canal e ativar o sininho pra não perder os próximos tutoriais!",
+            "category": "Outros",
+            "keywords": [
+                "cupom",
+                "relatorio",
+                "shoppub",
+                "ecommerce"
+            ],
+            "thumbnail": "https://img.youtube.com/vi/22krSplqybI/maxresdefault.jpg"
         }
     ]
 }

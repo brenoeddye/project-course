@@ -42,4 +42,12 @@ router.beforeEach((to, from, next) => {
 	next()
 })
 
+// Adiciona comportamento de rolar para o topo após cada navegação
+router.afterEach(() => {
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth'
+	})
+})
+
 export default router
