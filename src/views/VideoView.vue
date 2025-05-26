@@ -12,10 +12,10 @@
 				<VideoDetails />
 
 				<div class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-					<h1 class="text-2xl font-bold mb-2">{{ videoData.title }}</h1>
-					<p class="text-gray-700 dark:text-gray-300 mb-4">{{ videoData.description }}</p>
+					<h1 class="text-2xl font-bold mb-2">{{ video.title }}</h1>
+					<p class="text-gray-700 dark:text-gray-300 mb-4">{{ video.description }}</p>
 					<div class="flex flex-wrap gap-2">
-						<span v-for="keyword in videoData.keywords" :key="keyword"
+						<span v-for="keyword in video.keywords" :key="keyword"
 							class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700">
 							{{ keyword }}
 						</span>
@@ -23,26 +23,21 @@
 				</div>
 			</div>
 			<!-- Sidebar com vídeos relacionados -->
-			<Sidebar :current-video-id="videoId" />
+			<Sidebar :current-video-id="video.id" />
 		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useRoute } from 'vue-router'
 import content from '@/content.json'
 
-const route = useRoute()
-
-const videoId = computed(() => Number(route.params.id) || 0)
-
-const videoData = computed(() => {
-	return content.videos.find(v => v.id === videoId.value) || content.videos[0]
-})
+const props = defineProps<{
+	video: typeof content.videos[0]
+}>()
 
 const youtubeEmbedUrl = computed(() => {
-	const videoUrl = videoData.value.youtubeUrl
+	const videoUrl = props.video.youtubeUrl
 	const videoIdMatch = videoUrl.split('v=')[1]?.split('&')[0] || ''
 	return `https://www.youtube.com/embed/${videoIdMatch}`
 })

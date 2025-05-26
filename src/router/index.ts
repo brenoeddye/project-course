@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import content from '../content.json'
+import { findVideoBySlug } from '../utils/slug'
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,9 +14,17 @@ const router = createRouter({
 			}
 		},
 		{
-			path: '/video/:id',
+			path: '/video/:slug',
 			name: 'video',
 			component: () => import('../views/VideoView.vue'),
+			props: (route) => {
+				const video = findVideoBySlug(route.params.slug as string, content.videos)
+				if (!video) {
+					router.push('/')
+					return { video: null }
+				}
+				return { video }
+			},
 			meta: {
 				transition: 'slide'
 			}
