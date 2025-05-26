@@ -40,6 +40,7 @@ declare global {
 		}
 		onYouTubeIframeAPIReady: () => void
 		dataLayer?: any[]
+		gtag: (command: string, action: string, params?: any) => void
 	}
 }
 
@@ -80,21 +81,51 @@ function initializePlayer() {
 	})
 }
 
-function onPlayerStateChange(event: { data: number; target: { getCurrentTime: () => number; getDuration: () => number } }) {
+function trackVideoEvent(
+	eventName: string,
+	videoId: string,
+	videoTitle: string,
+	percent: number
+) {
+	window.dataLayer = window.dataLayer || []
+	window.dataLayer.push({
+		event: 'youtube_video_event',
+		video_event: eventName,
+		video_id: videoId,
+		video_title: videoTitle,
+		video_percent: percent
+	})
+
+	if (typeof window.gtag === 'function') {
+		window.gtag('event', 'youtube_video_event', {
+			event_category: 'YouTube Video',
+			event_label: `${videoTitle} (${videoId})`,
+			video_event: eventName,
+			video_id: videoId,
+			video_title: videoTitle,
+			video_percent: percent
+		})
+	}
+}
+
+function onPlayerStateChange(event: {
+	data: number
+	target: { getCurrentTime: () => number; getDuration: () => number }
+}) {
 	const events: Record<number, string> = {
 		[-1]: 'unstarted',
 		[0]: 'ended',
 		[1]: 'playing',
 		[2]: 'paused',
 		[3]: 'buffering',
-		[5]: 'video cued'
+		[5]: 'video_cued'
 	}
 
 	const eventName = events[event.data] || 'unknown'
 	const videoId = props.video.youtubeUrl.split('v=')[1]?.split('&')[0] || ''
 	const videoTitle = props.video.title
 
-	function calcularPercentual(event: { target: { getCurrentTime: () => number; getDuration: () => number } }) {
+	const calcularPercentual = () => {
 		try {
 			const current = event.target.getCurrentTime()
 			const total = event.target.getDuration()
@@ -105,13 +136,7 @@ function onPlayerStateChange(event: { data: number; target: { getCurrentTime: ()
 		}
 	}
 
-	window.dataLayer?.push({
-		event: 'youtube_video_event',
-		video_event: eventName,
-		video_id: videoId,
-		video_title: videoTitle,
-		video_percent: calcularPercentual(event)
-	})
+	trackVideoEvent(eventName, videoId, videoTitle, calcularPercentual())
 }
 
 onMounted(() => {
