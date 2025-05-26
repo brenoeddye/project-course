@@ -57,7 +57,7 @@ interface Author {
 const author = ref<Author>({
 	name: 'Universidade Shoppub',
 	role: 'Tutor',
-	avatar: '/logo.jpg',
+	avatar: '/favicon.jpg',
 	socials: [
 		{
 			platform: 'youtube',

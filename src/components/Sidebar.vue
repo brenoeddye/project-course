@@ -34,6 +34,12 @@ const router = useRouter()
 // Função para encontrar vídeos relacionados baseado nas keywords
 const relatedVideos = computed(() => {
   const currentVideo = content.videos[props.currentVideoId]
+  
+  // Verifica se o vídeo atual existe
+  if (!currentVideo) {
+    return []
+  }
+
   const currentKeywords = currentVideo.keywords
 
   // Encontra vídeos que compartilham keywords com o vídeo atual

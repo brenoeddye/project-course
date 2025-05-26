@@ -61,18 +61,48 @@
         },
         {
             "id": 5,
-            "youtubeUrl": "https://www.youtube.com/watch?v=exemplo5",
-            "title": "Dicas de Uso do Bloco de Notas",
-            "subtitle": "SHOPPUB",
-            "description": "Descubra como aproveitar ao máximo seu bloco de notas para aumentar sua produtividade.",
-            "category": "Outros",
+            "youtubeUrl": "https://www.youtube.com/watch?v=5M0Fb8nECkA",
+            "title": "Como Ativar o Google Search Console na Sua Loja com a Shoppub",
+            "subtitle": "Aprenda a ativar o Google Search Console na sua loja com a Shoppub",
+            "description": "Aprenda o passo a passo para ativar o Google Search Console na sua loja virtual com a plataforma Shoppub. Com essa ferramenta, você pode monitorar o desempenho da sua loja no Google e melhorar sua presença nos resultados de busca. Assista agora e otimize seu SEO!",
+            "category": "Ferramentas",
             "keywords": [
-                "bloco de notas",
-                "produtividade",
-                "dicas",
-                "organização"
+                "google search console",
+                "seo",
+                "google",
+                "shoppub"
             ],
-            "thumbnail": "https://img.youtube.com/vi/exemplo5/maxresdefault.jpg"
+            "thumbnail": "https://img.youtube.com/vi/5M0Fb8nECkA/maxresdefault.jpg"
+        },
+        {
+            "id": 6,
+            "youtubeUrl": "https://www.youtube.com/watch?v=vcSptMKOfsk",
+            "title": "Esquece a senha! Veja o NOVO jeito de fazer login na sua loja!",
+            "subtitle": "Aprenda a ativar o Google Search Console na sua loja com a Shoppub",
+            "description": "🚀 Sua loja ainda usa login com senha? Você tá perdendo vendas! Conheça o novo modelo de acesso por código, mais rápido e seguro — já disponível na Shoppub! 👀 Neste vídeo revelamos: ⚡ Como funciona o login sem senha 📉 Por que ele reduz abandono no checkout 🧠 Como ativar em minutos na sua loja 💡 Dica extra: seus clientes VÃO AMAR! 🔔 Se inscreve no canal pra não perder as próximas sacadas!",
+            "category": "Configurações",
+            "keywords": [
+                "login",
+                "senha",
+                "shoppub",
+                "ecommerce"
+            ],
+            "thumbnail": "https://img.youtube.com/vi/vcSptMKOfsk/maxresdefault.jpg"
+        },
+        {
+            "id": 7,
+            "youtubeUrl": "https://www.youtube.com/watch?v=yuxlcPGUQvQ",
+            "title": "Como Autenticar Seu Domínio no Google pela Plataforma Shoppub (Passo a Passo)",
+            "subtitle": "Aprenda a ativar o Google Search Console na sua loja com a Shoppub",
+            "description": "Aprenda como autenticar seu domínio no Google de forma simples e rápida usando a plataforma Shoppub! 🚀 Este tutorial passo a passo vai te ajudar a configurar tudo corretamente para garantir que sua loja esteja validada e pronta para aparecer nos resultados do Google. Ideal para quem usa Shoppub e quer otimizar sua presença online. 🔒 Verificação DNS 🧩 Google Search Console 🛒 Integração com e-commerce Shoppub 📌 Deixe seu like e se inscreva para mais tutoriais sobre e-commerce e marketing digital!","category": "Configurações",
+            "keywords": [
+                "google",
+                "shoppub",
+                "ecommerce",
+                "autenticação",
+                "domínio"
+            ],
+            "thumbnail": "https://img.youtube.com/vi/yuxlcPGUQvQ/maxresdefault.jpg"
         }
     ]
 }
