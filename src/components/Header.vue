@@ -1,7 +1,7 @@
 <template>
     <header class="h-24">
         <div class="fixed w-full flex justify-between items-center bg-white dark:bg-gray-800 py-2 px-4 transition-all duration-300 z-40">
-            <div class="flex items-center">
+            <div class="flex items-center gap-4">
                 <div class="md:hidden">
                     <button @click="isMobileMenuOpen = true">
                         <MenuIcon color="text-black dark:text-white" size="w-7 h-7" />

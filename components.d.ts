@@ -19,6 +19,7 @@ declare module 'vue' {
     DeleteIcon: typeof import('./src/components/icon/deleteIcon.vue')['default']
     Dropdown: typeof import('./src/components/hero/Dropdown.vue')['default']
     Gallery: typeof import('./src/components/hero/Gallery.vue')['default']
+    HatIcon: typeof import('./src/components/icon/hatIcon.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
     InfoList: typeof import('./src/components/hero/InfoList.vue')['default']
     Input: typeof import('./src/components/hero/Input.vue')['default']

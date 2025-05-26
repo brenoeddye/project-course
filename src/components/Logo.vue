@@ -1,18 +1,25 @@
 <template>
-    <div class="logo flex items-center">
+    <div class="relative logo flex flex-col items-center transition-all duration-300">
         <img 
-            :src="isDark ? trackgoBlack : trackgoWhite" 
+            :src="isDark ? shoppubBlack : shoppubWhite" 
             alt="Logo" 
-            class="w-[48px] h-[48px]"
+            class="w-[128px] h-[48px] animate-slide-in dark:brightness-[999%]"
         >
-        <h1 class="text-2xl font-bold">Universidade Shoppub</h1>
+        <h1 class="text-[0px]">Universidade Shoppub</h1>
+        <span 
+            class="absolute bottom-[2px] right-0 text-primary-800 font-semibold text-[10px] opacity-0 animate-fade-in"
+        >Universidade</span>
+        <HatIcon 
+            class="absolute top-[-1px] left-[29%] w-[16px] h-[16px] text-primary-800 opacity-0 animate-fade-in"
+        />
     </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import trackgoWhite from '@/assets/logo.jpg'
-import trackgoBlack from '@/assets/logo.jpg'
+import shoppubWhite from '@/assets/logo.svg'
+import shoppubBlack from '@/assets/logo.svg'
+import HatIcon from '@/components/icon/hatIcon.vue'
 
 const isDark = ref(false)
 
@@ -31,14 +38,34 @@ onMounted(() => {
 })
 </script>
 
-<style lang="scss" scoped>
-.logo {
-    img {
-        border-radius: 100%;
+<style scoped>
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
     }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
-    h1 {
-        font-size: 0;
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
     }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-in {
+    animation: slideIn 0.8s ease-out forwards;
 }
 </style>
