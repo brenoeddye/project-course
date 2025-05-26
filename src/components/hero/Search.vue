@@ -1,5 +1,5 @@
 <template>
-	<div class="relative w-full max-w-2xl">
+	<div class="relative w-full max-w-2xl" ref="searchContainer">
 		<div
 			class="flex items-center w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md px-4 py-2 shadow-sm">
 			<searchIcon class="mr-3" size="w-5 h-5" color="text-gray-400" />
@@ -28,16 +28,41 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, computed, watch, onMounted, onBeforeUnmount } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 import searchIcon from '@/components/icon/searchIcon.vue'
 import content from '@/content.json'
 import { generateSlug } from '@/utils/slug'
 
 const router = useRouter()
+const route = useRoute()
 const search = ref('')
 const emit = defineEmits(['search-results'])
 const showSuggestions = ref(false)
+const searchContainer = ref<HTMLElement | null>(null)
+
+// Zerar a busca quando a rota mudar
+watch(() => route.path, () => {
+	search.value = ''
+	suggestions.value = []
+	showSuggestions.value = false
+})
+
+// Função para verificar clique fora
+function handleClickOutside(event: MouseEvent) {
+	if (searchContainer.value && !searchContainer.value.contains(event.target as Node)) {
+		showSuggestions.value = false
+	}
+}
+
+// Adicionar e remover event listener
+onMounted(() => {
+	document.addEventListener('mousedown', handleClickOutside)
+})
+
+onBeforeUnmount(() => {
+	document.removeEventListener('mousedown', handleClickOutside)
+})
 
 // Computed property para obter todas as sugestões possíveis
 const allSuggestions = computed(() => {
