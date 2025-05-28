@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, onMounted } from 'vue'
+import { computed, ref, onMounted, watch } from 'vue'
 import content from '@/content.json'
 
 // Declarações de tipo para o YouTube Player API
@@ -138,6 +138,13 @@ function onPlayerStateChange(event: {
 
 	trackVideoEvent(eventName, videoId, videoTitle, calcularPercentual())
 }
+
+// Adicionar watch para mudar o título da página
+watch(() => props.video, (newVideo) => {
+	if (newVideo) {
+		document.title = `${newVideo.title} - Universidade Shoppub`
+	}
+}, { immediate: true })
 
 onMounted(() => {
 	// Inicialização do player
