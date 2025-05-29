@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 mt-6 flex justify-between items-center">
+	<div class="flex flex-col md:flex-row bg-white dark:bg-gray-800 rounded-lg shadow p-6 mt-6 justify-start items-start md:justify-between md:items-center gap-6 md:gap-0">
 		<!-- Informações do Autor -->
 		<div class="flex items-center gap-4">
 			<img :src="author.avatar" :alt="author.name" class="w-12 h-12 rounded-full">
@@ -10,10 +10,10 @@
 		</div>
 
 		<!-- Botão de Compartilhamento -->
-		<div class="flex items-center gap-2">
+		<div class="flex flex-row items-center gap-2">
 			<!-- Redes Sociais -->
 			<a v-for="social in author.socials" :key="social.platform" :href="social.url" target="_blank"
-				class="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors"
+				class="flex items-center lg:gap-2 px-4 py-2 text-[0px] lg:text-base rounded-lg transition-colors"
 				:class="{
 					'bg-red-50 hover:bg-red-100 text-red-600 dark:bg-red-900/20 dark:hover:bg-red-900/30 dark:text-red-400': social.platform === 'youtube',
 					'bg-gradient-to-r from-purple-50 via-pink-50 to-orange-50 hover:from-purple-100 hover:via-pink-100 hover:to-orange-100 text-purple-600 dark:from-purple-900/20 dark:via-pink-900/20 dark:to-orange-900/20 dark:hover:from-purple-900/30 dark:hover:via-pink-900/30 dark:hover:to-orange-900/30 dark:text-purple-400': social.platform === 'instagram'

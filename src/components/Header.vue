@@ -1,5 +1,5 @@
 <template>
-    <header class="h-24">
+    <header class="h-20 md:h-24">
         <div class="fixed w-full flex justify-between items-center bg-white dark:bg-gray-800 py-2 px-4 transition-all duration-300 z-40">
             <div class="lg:max-w-[1900px] mx-auto w-full flex justify-between items-center">
                 <div class="w-full md:w-auto flex items-center justify-between lg:justify-start gap-4">

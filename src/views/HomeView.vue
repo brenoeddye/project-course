@@ -3,7 +3,7 @@
 		<div class="w-full flex items-start gap-8 px-4 lg:px-8">
 			<!-- Sidebar -->
 			<aside
-				class="w-64 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 z-10">
+				class="hidden md:block w-64 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 z-10">
 				<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Categorias</h2>
 				<div class="space-y-2">
 					<button v-for="category in categories" :key="category" @click="selectedCategory = category"
@@ -19,6 +19,8 @@
 
 			<!-- Main Content -->
 			<main class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 !bg-transparent">
+				<h2 class="md:hidden text-2xl font-bold">Descubra</h2>
+
 				<Gallery v-for="item in filteredGalleryItems" :key="item.id" :image="item.thumbnail" :title="item.title"
 					:description="item.subtitle" :chip="item.category" :chip-color="getCategoryColor(item.category)"
 					@select="goToVideo(item.id)" />

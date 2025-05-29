@@ -7,10 +7,10 @@
         >
         <h1 class="text-[0px]">Universidade Shoppub</h1>
         <span 
-            class="absolute bottom-[2px] right-0 text-primary-800 font-semibold text-[10px] opacity-0 animate-fade-in"
+            class="hidden md:block absolute bottom-[2px] right-0 text-primary-800 font-semibold text-[10px] opacity-0 animate-fade-in"
         >Universidade</span>
         <HatIcon 
-            class="absolute top-[-1px] left-[29%] w-[16px] h-[16px] text-primary-800 opacity-0 animate-fade-in"
+            class="absolute top-[-4px] md:top-[-1px] left-[28%] md:left-[29%] w-[16px] h-[16px] text-primary-800 opacity-0 animate-fade-in"
         />
     </div>
 </template>
