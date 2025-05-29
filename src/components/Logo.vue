@@ -3,7 +3,7 @@
         <img 
             :src="isDark ? shoppubBlack : shoppubWhite" 
             alt="Logo" 
-            class="w-[128px] h-[48px] animate-slide-in dark:brightness-[999%]"
+            class="w-[100px] md:w-[128px] h-[36px] md:h-[48px] animate-slide-in dark:brightness-[999%]"
         >
         <h1 class="text-[0px]">Universidade Shoppub</h1>
         <span 

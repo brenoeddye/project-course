@@ -15,20 +15,13 @@
         <!-- Menu -->
         <Transition
             enter-active-class="transition-transform duration-300 ease-in-out"
-            enter-from-class="-translate-x-full"
+            enter-from-class="translate-x-full"
             enter-to-class="translate-x-0"
             leave-active-class="transition-transform duration-300 ease-in-out"
             leave-from-class="translate-x-0"
-            leave-to-class="-translate-x-full"
+            leave-to-class="translate-x-full"
         >
-            <div v-if="isOpen" class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-gray-800 shadow-lg z-50 md:hidden" @click.stop>
-                <div class="p-4 flex justify-between items-center border-b border-gray-200 dark:border-gray-700">
-                    <Logo />
-                    <button @click="$emit('close')" class="p-2">
-                        <closeIcon color="text-black dark:text-white" size="w-6 h-6" />
-                    </button>
-                </div>
-                
+            <div v-if="isOpen" class="fixed inset-y-0 right-0 w-64 bg-white dark:bg-gray-800 shadow-lg z-50 md:hidden" @click.stop>
                 <nav class="p-4">
                     <ul class="space-y-2">
                         <li>
@@ -75,10 +68,6 @@
 
 <script setup lang="ts">
 import { defineProps, defineEmits } from 'vue';
-import Logo from './Logo.vue';
-import dashboardIcon from './icon/dashboardIcon.vue';
-import databaseIcon from './icon/databaseIcon.vue';
-import closeIcon from './icon/closeIcon.vue';
 
 defineProps<{
     isOpen: boolean

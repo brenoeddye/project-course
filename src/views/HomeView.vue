@@ -1,6 +1,6 @@
 <template>
 	<div class="lg:max-w-[1900px] mx-auto flex justify-center pb-8">
-		<div class="w-full flex items-start gap-8 px-8">
+		<div class="w-full flex items-start gap-8 px-4 lg:px-8">
 			<!-- Sidebar -->
 			<aside
 				class="w-64 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 z-10">

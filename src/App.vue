@@ -9,6 +9,8 @@
 				<component :is="Component" />
 			</Transition>
 		</RouterView>
+
+		<QuickMenu />
 	</div>
 </template>
 

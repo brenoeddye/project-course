@@ -32,6 +32,7 @@ declare module 'vue' {
     NotificationDrawer: typeof import('./src/components/NotificationDrawer.vue')['default']
     PencilIcon: typeof import('./src/components/icon/pencilIcon.vue')['default']
     PlusIcon: typeof import('./src/components/icon/plusIcon.vue')['default']
+    QuickMenu: typeof import('./src/components/QuickMenu.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Search: typeof import('./src/components/hero/Search.vue')['default']

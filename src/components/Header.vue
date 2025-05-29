@@ -2,10 +2,10 @@
     <header class="h-24">
         <div class="fixed w-full flex justify-between items-center bg-white dark:bg-gray-800 py-2 px-4 transition-all duration-300 z-40">
             <div class="lg:max-w-[1900px] mx-auto w-full flex justify-between items-center">
-                <div class="flex items-center gap-4">
-                    <div class="md:hidden">
+                <div class="w-full md:w-auto flex items-center justify-between lg:justify-start gap-4">
+                    <div class="md:hidden order-2">
                         <button @click="isMobileMenuOpen = true">
-                            <MenuIcon color="text-black dark:text-white" size="w-7 h-7" />
+                            <MenuIcon color="text-black dark:text-white" size="w-7 h-7" style="transform: scaleX(-1);" />
                         </button>
                     </div>
 
@@ -23,13 +23,13 @@
                     </ul>
                 </div>
 
-                <div class="flex w-1/2 items-center gap-2">
+                <div class="hidden md:flex w-1/2 items-center gap-2">
                     <div class="hidden md:block w-full">
                         <Search />
                     </div>
                 </div>
 
-                <div class="flex items-center gap-2">
+                <div class="hidden md:flex items-center gap-2">
                     <NotificationDrawer />
 
                     <div ref="userDropdownRef" class="relative flex items-center h-10">
