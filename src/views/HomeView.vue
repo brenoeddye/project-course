@@ -1,5 +1,5 @@
 <template>
-	<div class="flex justify-center pb-8">
+	<div class="lg:max-w-[1900px] mx-auto flex justify-center pb-8">
 		<div class="w-full flex items-start gap-8 px-8">
 			<!-- Sidebar -->
 			<aside

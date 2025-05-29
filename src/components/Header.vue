@@ -1,41 +1,43 @@
 <template>
     <header class="h-24">
         <div class="fixed w-full flex justify-between items-center bg-white dark:bg-gray-800 py-2 px-4 transition-all duration-300 z-40">
-            <div class="flex items-center gap-4">
-                <div class="md:hidden">
-                    <button @click="isMobileMenuOpen = true">
-                        <MenuIcon color="text-black dark:text-white" size="w-7 h-7" />
-                    </button>
-                </div>
-
-                <router-link to="/" class="flex items-center gap-2 p-2 px-4">
-                    <Logo />
-                </router-link>
-
-                <ul class="hidden md:flex items-center gap-5">
-                    <li>
-                        <router-link to="/" class="flex items-center gap-2 p-2 px-4 rounded-lg transition-colors duration-300 hover:bg-primary-300" :class="{'bg-primary-100': $route.name === 'home'}">
-                            <dashboardIcon color="text-black dark:text-white" size="w-6 h-6" :class="{'text-primary dark:text-primary-900': $route.name === 'home'}" />
-                            <span class="text-black dark:text-white" :class="{'text-primary': $route.name === 'home'}">Descubra</span>
-                        </router-link>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="flex w-1/2 items-center gap-2">
-                <div class="hidden md:block w-full max-w-2xl">
-                    <Search />
-                </div>
-            </div>
-
-            <div class="flex items-center gap-2">
-                <NotificationDrawer />
-
-                <div ref="userDropdownRef" class="relative flex items-center h-10">
-                    <div class="hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-2 cursor-pointer" @click="toggleDropdown">
-                        <settingsIcon color="text-black dark:text-white" size="w-6 h-6" />
+            <div class="lg:max-w-[1900px] mx-auto w-full flex justify-between items-center">
+                <div class="flex items-center gap-4">
+                    <div class="md:hidden">
+                        <button @click="isMobileMenuOpen = true">
+                            <MenuIcon color="text-black dark:text-white" size="w-7 h-7" />
+                        </button>
                     </div>
-                    <Dropdown v-if="!isMobile" :open="open" :items="items" @select="handleSelect" />
+
+                    <router-link to="/" class="flex items-center gap-2 p-2 px-4">
+                        <Logo />
+                    </router-link>
+
+                    <ul class="hidden md:flex items-center gap-5">
+                        <li>
+                            <router-link to="/" class="flex items-center gap-2 p-2 px-4 rounded-lg transition-colors duration-300 hover:bg-primary-300" :class="{'bg-primary-100': $route.name === 'home'}">
+                                <dashboardIcon color="text-black dark:text-white" size="w-6 h-6" :class="{'text-primary dark:text-primary-900': $route.name === 'home'}" />
+                                <span class="text-black dark:text-white" :class="{'text-primary': $route.name === 'home'}">Descubra</span>
+                            </router-link>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex w-1/2 items-center gap-2">
+                    <div class="hidden md:block w-full">
+                        <Search />
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <NotificationDrawer />
+
+                    <div ref="userDropdownRef" class="relative flex items-center h-10">
+                        <div class="hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-2 cursor-pointer" @click="toggleDropdown">
+                            <settingsIcon color="text-black dark:text-white" size="w-6 h-6" />
+                        </div>
+                        <Dropdown v-if="!isMobile" :open="open" :items="items" @select="handleSelect" />
+                    </div>
                 </div>
             </div>
         </div>

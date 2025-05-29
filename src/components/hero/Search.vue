@@ -1,5 +1,5 @@
 <template>
-	<div class="relative w-full max-w-2xl" ref="searchContainer">
+	<div class="relative w-full" ref="searchContainer">
 		<div
 			class="flex items-center w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md px-4 py-2 shadow-sm">
 			<searchIcon class="mr-3" size="w-5 h-5" color="text-gray-400" />
