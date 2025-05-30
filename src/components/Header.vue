@@ -20,6 +20,13 @@
                                 <span class="text-black dark:text-white" :class="{'text-primary': $route.name === 'home'}">Descubra</span>
                             </router-link>
                         </li>
+
+                        <li>
+                            <router-link to="/courses" class="flex items-center gap-2 p-2 px-4 rounded-lg transition-colors duration-300 hover:bg-primary-300" :class="{'bg-primary-100': $route.name === 'courses'}">
+                                <courseIcon color="text-black dark:text-white" size="w-6 h-6" :class="{'text-primary dark:text-primary-900': $route.name === 'courses'}" />
+                                <span class="text-black dark:text-white" :class="{'text-primary': $route.name === 'courses'}">Cursos</span>
+                            </router-link>
+                        </li>
                     </ul>
                 </div>
 

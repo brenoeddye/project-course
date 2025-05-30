@@ -1,0 +1,102 @@
+{
+    "courses": [
+        {
+            "id": "curso-1",
+            "title": "Aprenda a criar produtos na Shoppub",
+            "description": "Como criar produtos na plataforma Shoppub",
+            "thumbnail": "https://img.youtube.com/vi/jJBXIVpX-Sk/maxresdefault.jpg",
+            "instructor": "Shoppub",
+            "duration": "20 minutos",
+            "level": "Iniciante",
+            "modules": [
+                {
+                    "id": "modulo-1",
+                    "title": "Introdução",
+                    "videos": [
+                        {
+                            "id": "video-1",
+                            "title": "Criar Departamento e Categorias",
+                            "description": "Aprenda a criar departamentos e categorias na Shoppub",
+                            "url": "https://www.youtube.com/watch?v=jJBXIVpX-Sk",
+                            "duration": "1:26",
+                            "thumbnail": "https://img.youtube.com/vi/jJBXIVpX-Sk/maxresdefault.jpg",
+                            "required": true
+                        }
+                    ]
+                },
+                {
+                    "id": "modulo-2",
+                    "title": "Produtos",
+                    "videos": [
+                        {
+                            "id": "video-2",
+                            "title": "Criando produto com variação",
+                            "description": "Aprenda a criar produtos com variação na Shoppub",
+                            "url": "https://www.youtube.com/watch?v=roR8y16RinA",
+                            "duration": "5:09",
+                            "thumbnail": "https://img.youtube.com/vi/roR8y16RinA/maxresdefault.jpg",
+                            "required": true
+                        },
+                        {
+                            "id": "video-3",
+                            "title": "Criando variações",
+                            "description": "Aprenda a criar produtos com variação na Shoppub",
+                            "url": "https://www.youtube.com/watch?v=hVjN-XBkZ1E",
+                            "duration": "4:04",
+                            "thumbnail": "https://img.youtube.com/vi/hVjN-XBkZ1E/maxresdefault.jpg",
+                            "required": true
+                        },
+                        {
+                            "id": "video-4",
+                            "title": "Duplicar produtos",
+                            "description": "Aprenda a criar produtos com variação na Shoppub",
+                            "url": "https://www.youtube.com/watch?v=ArQh4952y88",
+                            "duration": "1:38",
+                            "thumbnail": "https://img.youtube.com/vi/ArQh4952y88/maxresdefault.jpg",
+                            "required": true
+                        },
+                        {
+                            "id": "video-5",
+                            "title": "Vincular Produtos/Cores",
+                            "description": "Aprenda a criar produtos com variação na Shoppub",
+                            "url": "https://www.youtube.com/watch?v=zxSp16gBMMM",
+                            "duration": "1:10",
+                            "thumbnail": "https://img.youtube.com/vi/zxSp16gBMMM/maxresdefault.jpg",
+                            "required": true
+                        }
+                    ]
+                },
+                {
+                    "id": "modulo-3",
+                    "title": "Vitrine",
+                    "videos": [
+                        {
+                            "id": "video-6",
+                            "title": "Coleções e Vitrine na home",
+                            "description": "Aprenda a criar coleções e vitrine na home na Shoppub",
+                            "url": "https://www.youtube.com/watch?v=ZhQIbLHj7YE",
+                            "duration": "2:26",
+                            "thumbnail": "https://img.youtube.com/vi/ZhQIbLHj7YE/maxresdefault.jpg", 
+                            "required": true
+                        }
+                    ]
+                },
+                {
+                    "id": "modulo-4",
+                    "title": "Atributos",
+                    "videos": [
+                        {
+                            "id": "video-7",
+                            "title": "Grupo de atributos e atributos",
+                            "description": "Aprenda a criar grupo de atributos e atributos na Shoppub",
+                            "url": "https://www.youtube.com/watch?v=DIJhY3gFB24",
+                            "duration": "3:24",
+                            "thumbnail": "https://img.youtube.com/vi/DIJhY3gFB24/maxresdefault.jpg", 
+                            "required": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
