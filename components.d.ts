@@ -25,6 +25,7 @@ declare module 'vue' {
     InfoList: typeof import('./src/components/hero/InfoList.vue')['default']
     Input: typeof import('./src/components/hero/Input.vue')['default']
     InstagramIcon: typeof import('./src/components/icon/instagramIcon.vue')['default']
+    LockIcon: typeof import('./src/components/icon/lockIcon.vue')['default']
     LoginButton: typeof import('./src/components/LoginButton.vue')['default']
     Logo: typeof import('./src/components/Logo.vue')['default']
     MenuIcon: typeof import('./src/components/icon/menuIcon.vue')['default']

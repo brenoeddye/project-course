@@ -44,14 +44,14 @@
 				<h2 class="text-2xl font-bold mb-4">Conteúdo do Curso</h2>
 
 				<div v-for="module in course.modules" :key="module.id"
-					class="bg-white rounded-lg shadow-md overflow-hidden">
-					<div class="p-4 bg-gray-50 border-b">
+					class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+					<div class="p-4 bg-gray-50 dark:bg-gray-700 border-b border-gray-200 dark:border-gray-600">
 						<h3 class="text-lg font-semibold">{{ module.title }}</h3>
 					</div>
 
-					<div class="divide-y">
+					<div class="divide-y bg-gray-50 dark:bg-gray-800">
 						<div v-for="video in module.videos" :key="video.id"
-							class="p-4 hover:bg-gray-50 transition-colors duration-200">
+							class="p-4 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors duration-200">
 							<router-link :to="getVideoLink(course.id, video)"
 								class="flex items-center justify-between">
 								<div class="flex items-center space-x-4">
